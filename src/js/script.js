@@ -3,9 +3,14 @@
  * https://github.com/CaptainKostaZ/SaPi-TruckersMP
  *
  *
+<<<<<<< HEAD
  * Forked and updated by Alex Kernel & CaptainKostaZ
  *
  * Last Edit: 25/09/2017
+=======
+ * Last Edit: 17/04/2015
+ * Last Edit: 25/09/2017 by AlexKERNEL
+>>>>>>> a2280eb3ee5712838d12772135be411d3d3502dd
  */
 // ==================================================================================
 include(chrome.extension.getURL('/js/inject.js'));
@@ -60,10 +65,18 @@ function getUserInfo(id, callback){
 */
 function getBans(id) {
 	var url = "https://api.truckersmp.com/v2/bans/" + id;
+<<<<<<< HEAD
 	$.getJSON(url, function (data) {
         console.log(data);
 		if (data.response.length != 0) {
 			$('#SaPi_TruckersMP').append($('<a/>', {"id": 'getAllBans', "href": '#getAllBans', "onclick": "getAllBans();return false"}).text(' (' + chrome.i18n.getMessage('injHaveBans') + ')'));
+=======
+	$.get(url, function (data) {
+		if ($(data).find('.info').length == 0) {
+			$('#SaPi_ETS2MP').append($('<a/>', {"id": 'getAllBans', "href": '#getAllBans', "onclick": "getAllBans();return false"}).text(' (' + chrome.i18n.getMessage('injHaveBans') + ')'));
+			$tElement = $(data).find("#bans").find('tr');
+			
+>>>>>>> a2280eb3ee5712838d12772135be411d3d3502dd
 			$('#getAllBans').click(getAllBansSaPi);
 		}
 	});
@@ -140,8 +153,13 @@ function addInfo() {
 		infoInSteam(_STEAMID);
 	}
 	else if (_URL.indexOf("truckersmp.com") != -1) {
+<<<<<<< HEAD
 		_TruckersMPID = window.location.href.split('/').reverse()[0];
 		infoInTruckersMP(_TruckersMPID);
+=======
+		_ETS2MPID = $("#idSaPi").val();
+		infoInEts2MP(_ETS2MPID);
+>>>>>>> a2280eb3ee5712838d12772135be411d3d3502dd
 	}
 }
 
@@ -158,7 +176,11 @@ function infoInSteam(id) {
 							.append(this.error ? this.descriptor :
 								$('<strong/>').text('TruckersMP ID: '))
 							.append(this.error ? '' :
+<<<<<<< HEAD
 								$('<a/>', {"id": 'SaPi_TruckersMP', "href": 'https://truckersmp.com/user/' + this.response.id, "target": "_blank"})
+=======
+								$('<a/>', {"id": 'SaPi_ETS2MP', "href": 'https://truckersmp.com/user/' + this.response.id})
+>>>>>>> a2280eb3ee5712838d12772135be411d3d3502dd
 									.text(this.response.id))
 							.append('<br>')
 							.append($('<a/>', {"id": 'getMoreInfo', "href": '#getMoreInfo', "onclick": "getMoreInfo();return false"}).text(chrome.i18n.getMessage('injGetMoreInf')));
@@ -171,11 +193,23 @@ function infoInSteam(id) {
  * Function add info about player on TruckersMP page!
  * append DIV-container(class "SaPi") to "thead"
  */
+<<<<<<< HEAD
 function infoInTruckersMP(id) {
     var url = "https://api.truckersmp.com/v2/player/" + id;
 	$.getJSON(url, function (data){
 		steamID = data.response.steamID64;
 		$('.SaPiSteam').text('');
 		$('.SaPiSteam').append($('<a/>', {"href": 'http://steamcommunity.com/profiles/' + steamID, "text": 'Steam'}));
+=======
+function infoInEts2MP(id) {
+	$.ajax({
+	    url: "http://api.truckersmp.com/v2/player/" + id,
+	    dataType : "text",
+	    success: function (data) {
+			steamID = data.split("{")[2].split(",")[3].split(":")[1];
+			$('.SaPiSteam').text('');
+			$('.SaPiSteam').append($('<a/>', {"href": 'http://steamcommunity.com/profiles/' + steamID, "text": 'Steam'}));
+		}
+>>>>>>> a2280eb3ee5712838d12772135be411d3d3502dd
 	});
 }
