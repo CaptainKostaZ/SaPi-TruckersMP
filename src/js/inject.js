@@ -1,7 +1,7 @@
 // alert(window.location.indexOf("steamcommunity.com") != -1);
 
 if (window.g_rgProfileData !== undefined) {
-    var placeHolder = $J(".profile_in_game");
+    var placeHolder = $J(".profile_header_content");
     if (placeHolder !== undefined) {
         var ets2mp_div = $J('<div/>', {"id": 'containerSaPi'}).append($J('<img/>', {"src": 'http://cdn.steamcommunity.com/public/images/login/throbber.gif', "width": '18'}));
         placeHolder.append(ets2mp_div);
