@@ -4,4 +4,4 @@ This is an old tool Alex KERNEL found and updated in order to work with Truckers
  
 This tool is a chrome extension which allows you see user's TruckersMP ID,Steam ID and also a link to user's profile. This is a helpful tool for the support job when you need to find user's profile on TruckersMP.
 
-In order to install this chrome extension you will have to add the extension in Chrome with enabled Developer Mode ([see how](https://developer.chrome.com/extensions/getstarted#unpacked)).
+In order to install this chrome extension you will have to add the extension in Chrome with enabled Developer Mode ([see how](https://developer.chrome.com/extensions/getstarted#unpacked)). User "src" Folder.
