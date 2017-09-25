@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"name": "__MSG_appName__",
 	"description": "__MSG_appDesc__",
 	"default_locale": "en",
@@ -17,8 +17,8 @@
 			"notifications",
 			"http://steamcommunity.com/*",
 			"https://steamcommunity.com/*",
-			"http://api.ets2mp.com/*",
-			"http://ets2mp.com/*"
+			"http://api.truckersmp.com/*",
+			"http://truckersmp.com/*"
 	],
 	"content_scripts": [{
 		"matches": [
@@ -27,7 +27,7 @@
 				"*://steamcommunity.com//profiles/*",
 				"*://steamcommunity.com//id/*",
 				"*://steamcommunity.com//id/*",
-				"http://ets2mp.com/index.php?page=profile&id=*"
+				"http://truckersmp.com/index.php?page=profile&id=*"
 		],
 		"js": [
 				"/js/jquery-2.1.3.min.js",

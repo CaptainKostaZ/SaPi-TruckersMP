@@ -10,25 +10,45 @@
         <script type="text/javascript" src="/js/popup.js"></script>
     </head>
     <body id="popup">
-    	<div class="main">
-    		<center>
-    			<img src="./img/logo.png" width="250" />
-    			<a class="ui top right mini attached label" href="options.html">Options</a>
-    		</center>
-    	</div>
-    	<div class="ui divider"></div>
+    	<a class="ui top right attached label" href="#" id="go_to_options" data-resource="options_OptionsLink"></a>
+        <center>
+            <div id="version">
+                <div class="ui divided selection list">
+                  <a class="item">
+                    MP:
+                    <div class="ui horizontal label" id="mp">Loading....</div>
+                  </a>
+<!--                   <a class="item">
+                    L:
+                    <div class="ui horizontal label" id="launcher">Candy</div>
+                  </a> -->
+                  <a class="item">
+                    ETS2 <div class="ui horizontal label" id="ets2">Loading...</div>
+                    ATS: <div class="ui horizontal label" id="ats">Loading...</div>
+                  </a>
+                </div>
+            </div>
+        </center>
+
+        <br>
+        <div id="main"></div>
+
 		<center>
-	    	<a class="ui image mini label" href="http://forum.ets2mp.com/index.php?/topic/11641-sapi-extension-for-browsers/">
-				<img src="/img/ets2mp.com.png">
-				ets2mp.com
+			<a class="ui image mini label" data-href="https://truckersmp.com" href="#">
+				<img src="/img/TMPIcon.png">
+				Website
 			</a>
-			<a class="ui image mini label" href="http://ets2mp.ru/showthread.php/1046-Расширение-Chrome">
-				<img src="/img/ets2mp.ru.png">
-				ets2mp.ru
+	    	<a class="ui image mini label" data-href="http://forum.truckersmp.com" href="#">
+				<img src="/img/TMPIcon.png">
+				Forums
 			</a>
-			<a class="ui image mini label" href="https://github.com/jackrv/SaPi-ETS2MP-">
+			<a class="ui image mini label" data-href="https://truckersmp.com/status" href="#">
+				<img src="/img/TMPIcon.png">
+				TruckersMP Status
+			</a>
+			<a class="ui image mini label" data-href="https://github.com/CaptainKostaZ/SaPi-TruckersMP"">
 				<img src="/img/github.png">
-				github.com
+				Github
 			</a>
 		</center>
     </body>
