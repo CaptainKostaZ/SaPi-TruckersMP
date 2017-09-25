@@ -6,6 +6,7 @@
  * Creative Commons «Attribution-ShareAlike (CC BY-SA)
  *
  * Last Edit: 17/04/2015
+ * Last Edit: 25/09/2017 by AlexKERNEL
  */
 // ==================================================================================
 include(chrome.extension.getURL('/js/inject.js'));
@@ -41,7 +42,7 @@ $(document).ready(function() {
  * @return {json} Load json-data into global variable JSON
  */
 function getUserInfo(id, callback){
-	var url = "http://api.ets2mp.com/player/" + id;
+	var url = "https://api.truckersmp.com/v2/player/" + id;
 	$.getJSON(url, function (data) {
 		callback.call(data);
 		JSON = data.response;
@@ -59,7 +60,7 @@ function getUserInfo(id, callback){
  * @return {boolean} Presence of bans
 */
 function getBans(id) {
-	var url = "http://ets2mp.com/index.php?page=profile&id=" + id;
+	var url = "https://api.truckersmp.com/v2/bans/" + id;
 	$.get(url, function (data) {
 		if ($(data).find('.info').length == 0) {
 			$('#SaPi_ETS2MP').append($('<a/>', {"id": 'getAllBans', "href": '#getAllBans', "onclick": "getAllBans();return false"}).text(' (' + chrome.i18n.getMessage('injHaveBans') + ')'));
@@ -140,7 +141,7 @@ function addInfo() {
 		_PERSONALNAME = $("#personanameSaPi").val();
 		infoInSteam(_STEAMID);
 	}
-	else if (_URL.indexOf("ets2mp.com") != -1) {
+	else if (_URL.indexOf("truckersmp.com") != -1) {
 		_ETS2MPID = $("#idSaPi").val();
 		infoInEts2MP(_ETS2MPID);
 	}
@@ -157,9 +158,9 @@ function infoInSteam(id) {
 							.append($('<a/>', {"href": 'http://steamcommunity.com/profiles/' + id}).text(id))
 							.append(' | ')
 							.append(this.error ? this.descriptor :
-								$('<strong/>').text('ETS2MP ID: '))
+								$('<strong/>').text('TruckersMP ID: '))
 							.append(this.error ? '' :
-								$('<a/>', {"id": 'SaPi_ETS2MP', "href": 'http://ets2mp.com/index.php?page=profile&id=' + this.response.id})
+								$('<a/>', {"id": 'SaPi_ETS2MP', "href": 'https://truckersmp.com/user/' + this.response.id})
 									.text(this.response.id))
 							.append(' | ')
 							.append($('<a/>', {"id": 'getMoreInfo', "href": '#getMoreInfo', "onclick": "getMoreInfo();return false"}).text(chrome.i18n.getMessage('injGetMoreInf')));
@@ -174,7 +175,7 @@ function infoInSteam(id) {
  */
 function infoInEts2MP(id) {
 	$.ajax({
-	    url: "http://api.ets2mp.com/player/" + id,
+	    url: "http://api.truckersmp.com/v2/player/" + id,
 	    dataType : "text",
 	    success: function (data) {
 			steamID = data.split("{")[2].split(",")[3].split(":")[1];
