@@ -1,6 +1,5 @@
-# SaPi [ETS2MP]
+# SaPi [TruckersMP]
 
-Расширение к браузерам основанным на Chromim-движке, позволяющее добавить массу полезной информации на страницах Steam и ETS2MP профилей.
-Должно быть полезным как обычным пользователям желающим держать все под своим контролем так и руководителям различных компаний, т.к. позволяет отобразить сразу максимум доступной информации!
-
-Более подробно на [форуме](http://ets2mp.ru/showthread.php/1046-Расширение-Chrome)
+This is an old tool Alex KERNEL found and updated in order to work with TruckersMP as it was working only with the old ETS2MP website, I fixed the website links and updated the logos with our new logos on options and popup tab.
+ 
+This tool is a chrome extension which allows you see user's TruckersMP ID,Steam ID and also a link to user's profile. This is a helpful tool for the support job when you need to find user's profile on TruckersMP.
