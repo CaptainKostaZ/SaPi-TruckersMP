@@ -89,15 +89,15 @@
     "description": "Row header on full info modal"
   },
   "injInfModal_SteamName": {
-    "message": "Name of Steam",
+    "message": "Nickname of Steam",
     "description": "Row header on full info modal"
   },
   "injInfModal_TruckersMPID": {
     "message": "TruckersMP ID",
     "description": "Row header on full info modal"
   },
-  "injInfModal_ForumName": {
-    "message": "Name on forum",
+  "injInfModal_TruckersMPNick": {
+    "message": "Nickname on TruckersMP",
     "description": "Row header on full info modal"
   },
   "injInfModal_JoinDate": {
@@ -109,7 +109,7 @@
     "description": "Row header on full info modal"
   },
   "injInfModal_GameGroup": {
-    "message": "Group on game",
+    "message": "Privilegies in the TruckersMP",
     "description": "Row header on full info modal"
   },
   "ntfk_NewVersionTitle": {

@@ -89,27 +89,23 @@
     "description": "Row header on full info modal"
   },
   "injInfModal_SteamName": {
-    "message": "Имя (Steam)",
+    "message": "Ник в Steam",
     "description": "Row header on full info modal"
   },
   "injInfModal_TruckersMPID": {
     "message": "TruckersMP ID",
     "description": "Row header on full info modal"
   },
-  "injInfModal_ForumName": {
-    "message": "Имя (на форуме)",
+  "injInfModal_TruckersMPNick": {
+    "message": "Ник в TruckersMP",
     "description": "Row header on full info modal"
   },
   "injInfModal_JoinDate": {
     "message": "Дата регистрации",
     "description": "Row header on full info modal"
   },
-  "injInfModal_ForumGroup": {
-    "message": "Группа (на форуме)",
-    "description": "Row header on full info modal"
-  },
   "injInfModal_GameGroup": {
-    "message": "Группа (в игре)",
+    "message": "Привелегии в TruckersMP",
     "description": "Row header on full info modal"
   },
   "ntfk_NewVersionTitle": {
